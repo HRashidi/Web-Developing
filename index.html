@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MsgApp">
   <head>
     <meta charset="utf-8">
-    <title>Hello Coursera</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>AngularJS</title>
   </head>
   <body>
-    <h1>Hello Coursera</h1>
-    <p>
-      It is a repo for learning HTML, CSS, JS and AngularJS :).
-    </p>
+    <h1>Expression</h1>
+    <div ng-controller ="MsgController">
+      My name: <input type="text" ng-model="name"/><br>
+      Message is: <br>
+      {{sayMassage()}}
+      <div >
+        <button ng-click="feedXlord();">Feed Xlord</button>
+        <br>
+        <img ng-src="images/xlord_{{stateOfBeing}}.png">
+      </div>
+    </div>
   </body>
 </html>
